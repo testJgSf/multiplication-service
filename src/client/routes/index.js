@@ -7,3 +7,6 @@ router.get('/', function(req, res, next) {
 });
 
 module.exports = router;
+
+
+//git remote set-url origin new.git.url/here
