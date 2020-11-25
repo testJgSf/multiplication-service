@@ -1,12 +1,22 @@
-var express = require('express');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+let express = require('express');
+let cookieParser = require('cookie-parser');
+let roundTo = require('round-to');
+global.roundNumber = roundTo;
+global.decimalsNumber = process.env.decimals ? process.env.decimals : 5;
+let logger = require('morgan');
+let log4js = require("log4js");
+global.log = log4js.getLogger();
+log.level = 'debug';
 
-var indexRouter = require('./src/client/routes/index');
+let indexRouter = require('./src/client/routes/multiply');
 
-var app = express();
+global.httpOk = 200;
+global.httpBadRequest = 400;
+global.httpUnprocessableEntity= 422;
 
-app.use(logger('dev'));
+let app = express();
+
+app.use(logger('common'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
