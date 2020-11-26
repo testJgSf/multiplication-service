@@ -20,7 +20,7 @@
   
 ## Contratos  
   
-Los contratos de entrada y salida se encuentran documentados en el siguiente link   ***************  
+- multiplication  [Servicio de multiplicación OpenApi 3.0](https://app.swaggerhub.com/apis-docs/test_jg_sf/multiplication-service/1.0.0  )  
   
   
 ## Documentación adicional  
